@@ -56,7 +56,7 @@ Partial Class frmArmazens
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
-        Me.ToolStrip1.Size = New System.Drawing.Size(565, 39)
+        Me.ToolStrip1.Size = New System.Drawing.Size(424, 39)
         Me.ToolStrip1.Stretch = True
         Me.ToolStrip1.TabIndex = 3
         Me.ToolStrip1.Text = "ToolStrip1"
@@ -160,76 +160,69 @@ Partial Class frmArmazens
         'StatusStrip1
         '
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tssContReg})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 185)
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 149)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Padding = New System.Windows.Forms.Padding(1, 0, 19, 0)
-        Me.StatusStrip1.Size = New System.Drawing.Size(565, 25)
+        Me.StatusStrip1.Size = New System.Drawing.Size(424, 22)
         Me.StatusStrip1.TabIndex = 11
         Me.StatusStrip1.Text = "StatusStrip1"
         '
         'tssContReg
         '
         Me.tssContReg.Name = "tssContReg"
-        Me.tssContReg.Size = New System.Drawing.Size(98, 20)
+        Me.tssContReg.Size = New System.Drawing.Size(78, 17)
         Me.tssContReg.Text = "Registro n / n"
         '
         'txtDescricao
         '
-        Me.txtDescricao.Location = New System.Drawing.Point(100, 98)
-        Me.txtDescricao.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtDescricao.Location = New System.Drawing.Point(75, 80)
         Me.txtDescricao.MaxLength = 120
         Me.txtDescricao.Name = "txtDescricao"
-        Me.txtDescricao.Size = New System.Drawing.Size(445, 22)
+        Me.txtDescricao.Size = New System.Drawing.Size(335, 20)
         Me.txtDescricao.TabIndex = 2
         '
         'txtCodigo
         '
         Me.txtCodigo.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.txtCodigo.Location = New System.Drawing.Point(77, 55)
-        Me.txtCodigo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.txtCodigo.MaxLength = 2
+        Me.txtCodigo.Location = New System.Drawing.Point(58, 45)
+        Me.txtCodigo.MaxLength = 8
         Me.txtCodigo.Name = "txtCodigo"
-        Me.txtCodigo.Size = New System.Drawing.Size(83, 22)
+        Me.txtCodigo.Size = New System.Drawing.Size(63, 20)
         Me.txtCodigo.TabIndex = 1
         '
         'lblDescricao
         '
         Me.lblDescricao.AutoSize = True
-        Me.lblDescricao.Location = New System.Drawing.Point(17, 103)
-        Me.lblDescricao.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblDescricao.Location = New System.Drawing.Point(13, 84)
         Me.lblDescricao.Name = "lblDescricao"
-        Me.lblDescricao.Size = New System.Drawing.Size(75, 17)
+        Me.lblDescricao.Size = New System.Drawing.Size(58, 13)
         Me.lblDescricao.TabIndex = 2
         Me.lblDescricao.Text = "Descrição:"
         '
         'lblCodigo
         '
         Me.lblCodigo.AutoSize = True
-        Me.lblCodigo.Location = New System.Drawing.Point(17, 58)
-        Me.lblCodigo.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblCodigo.Location = New System.Drawing.Point(13, 47)
         Me.lblCodigo.Name = "lblCodigo"
-        Me.lblCodigo.Size = New System.Drawing.Size(56, 17)
+        Me.lblCodigo.Size = New System.Drawing.Size(43, 13)
         Me.lblCodigo.TabIndex = 1
         Me.lblCodigo.Text = "Código:"
         '
         'lblstatus
         '
         Me.lblstatus.AutoSize = True
-        Me.lblstatus.Location = New System.Drawing.Point(17, 145)
-        Me.lblstatus.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblstatus.Location = New System.Drawing.Point(13, 118)
         Me.lblstatus.Name = "lblstatus"
-        Me.lblstatus.Size = New System.Drawing.Size(52, 17)
+        Me.lblstatus.Size = New System.Drawing.Size(40, 13)
         Me.lblstatus.TabIndex = 3
         Me.lblstatus.Text = "Status:"
         '
         'rgAtivo
         '
         Me.rgAtivo.AutoSize = True
-        Me.rgAtivo.Location = New System.Drawing.Point(73, 143)
-        Me.rgAtivo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.rgAtivo.Location = New System.Drawing.Point(55, 116)
         Me.rgAtivo.Name = "rgAtivo"
-        Me.rgAtivo.Size = New System.Drawing.Size(60, 21)
+        Me.rgAtivo.Size = New System.Drawing.Size(49, 17)
         Me.rgAtivo.TabIndex = 3
         Me.rgAtivo.TabStop = True
         Me.rgAtivo.Text = "Ativo"
@@ -238,10 +231,9 @@ Partial Class frmArmazens
         'rgInativo
         '
         Me.rgInativo.AutoSize = True
-        Me.rgInativo.Location = New System.Drawing.Point(140, 143)
-        Me.rgInativo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.rgInativo.Location = New System.Drawing.Point(105, 116)
         Me.rgInativo.Name = "rgInativo"
-        Me.rgInativo.Size = New System.Drawing.Size(70, 21)
+        Me.rgInativo.Size = New System.Drawing.Size(57, 17)
         Me.rgInativo.TabIndex = 3
         Me.rgInativo.TabStop = True
         Me.rgInativo.Text = "Inativo"
@@ -249,9 +241,9 @@ Partial Class frmArmazens
         '
         'frmArmazens
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(565, 210)
+        Me.ClientSize = New System.Drawing.Size(424, 171)
         Me.Controls.Add(Me.lblstatus)
         Me.Controls.Add(Me.rgAtivo)
         Me.Controls.Add(Me.rgInativo)
@@ -261,7 +253,7 @@ Partial Class frmArmazens
         Me.Controls.Add(Me.lblCodigo)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.ToolStrip1)
-        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "frmArmazens"
         Me.Text = "Armazéns"
         Me.ToolStrip1.ResumeLayout(False)

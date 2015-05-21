@@ -68,8 +68,7 @@ Partial Class mdiPrincipal
         Me.MenuStrip.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip.MdiWindowListItem = Me.menuRelatorios
         Me.MenuStrip.Name = "MenuStrip"
-        Me.MenuStrip.Padding = New System.Windows.Forms.Padding(8, 2, 0, 2)
-        Me.MenuStrip.Size = New System.Drawing.Size(933, 28)
+        Me.MenuStrip.Size = New System.Drawing.Size(700, 24)
         Me.MenuStrip.TabIndex = 5
         Me.MenuStrip.Text = "MenuStrip"
         '
@@ -78,209 +77,207 @@ Partial Class mdiPrincipal
         Me.menuCadastro.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripSeparator5, Me.menuCadProdutos, Me.menuCadTipodeProdutos, Me.menuCadEstruturadeProdutos, Me.menuCadTipodeMovimentos, Me.menuCadArmazens, Me.ToolStripMenuItem2, Me.mnuSair})
         Me.menuCadastro.ImageTransparentColor = System.Drawing.SystemColors.ActiveBorder
         Me.menuCadastro.Name = "menuCadastro"
-        Me.menuCadastro.Size = New System.Drawing.Size(86, 24)
+        Me.menuCadastro.Size = New System.Drawing.Size(71, 20)
         Me.menuCadastro.Text = "&Cadastros"
         '
         'ToolStripSeparator5
         '
         Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
-        Me.ToolStripSeparator5.Size = New System.Drawing.Size(218, 6)
+        Me.ToolStripSeparator5.Size = New System.Drawing.Size(186, 6)
         '
         'menuCadProdutos
         '
         Me.menuCadProdutos.Name = "menuCadProdutos"
-        Me.menuCadProdutos.Size = New System.Drawing.Size(221, 24)
+        Me.menuCadProdutos.Size = New System.Drawing.Size(189, 22)
         Me.menuCadProdutos.Text = "Produto"
         '
         'menuCadTipodeProdutos
         '
         Me.menuCadTipodeProdutos.Name = "menuCadTipodeProdutos"
-        Me.menuCadTipodeProdutos.Size = New System.Drawing.Size(221, 24)
+        Me.menuCadTipodeProdutos.Size = New System.Drawing.Size(189, 22)
         Me.menuCadTipodeProdutos.Text = "Tipo de Produtos"
         '
         'menuCadEstruturadeProdutos
         '
         Me.menuCadEstruturadeProdutos.Name = "menuCadEstruturadeProdutos"
-        Me.menuCadEstruturadeProdutos.Size = New System.Drawing.Size(221, 24)
+        Me.menuCadEstruturadeProdutos.Size = New System.Drawing.Size(189, 22)
         Me.menuCadEstruturadeProdutos.Text = "Estrutura do Produtos"
         '
         'menuCadTipodeMovimentos
         '
         Me.menuCadTipodeMovimentos.Name = "menuCadTipodeMovimentos"
-        Me.menuCadTipodeMovimentos.Size = New System.Drawing.Size(221, 24)
+        Me.menuCadTipodeMovimentos.Size = New System.Drawing.Size(189, 22)
         Me.menuCadTipodeMovimentos.Text = "Tipo de Movimentos"
         '
         'menuCadArmazens
         '
         Me.menuCadArmazens.Name = "menuCadArmazens"
-        Me.menuCadArmazens.Size = New System.Drawing.Size(221, 24)
+        Me.menuCadArmazens.Size = New System.Drawing.Size(189, 22)
         Me.menuCadArmazens.Text = "Armazéns"
         '
         'ToolStripMenuItem2
         '
         Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
-        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(218, 6)
+        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(186, 6)
         '
         'mnuSair
         '
         Me.mnuSair.Name = "mnuSair"
-        Me.mnuSair.Size = New System.Drawing.Size(221, 24)
+        Me.mnuSair.Size = New System.Drawing.Size(189, 22)
         Me.mnuSair.Text = "Sair"
         '
         'menuProcessos
         '
         Me.menuProcessos.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menuProcMovimentodeEstoque, Me.menuProcAtualizaçãodeSaldo, Me.menuProcFechamentodeEstoque, Me.menuProcIntegraçãoContábil, Me.menuProcDigitaçãodoInventário, Me.menuProcProcessaroinventário})
         Me.menuProcessos.Name = "menuProcessos"
-        Me.menuProcessos.Size = New System.Drawing.Size(85, 24)
+        Me.menuProcessos.Size = New System.Drawing.Size(71, 20)
         Me.menuProcessos.Text = "Processos"
         '
         'menuProcMovimentodeEstoque
         '
         Me.menuProcMovimentodeEstoque.Name = "menuProcMovimentodeEstoque"
-        Me.menuProcMovimentodeEstoque.Size = New System.Drawing.Size(241, 24)
+        Me.menuProcMovimentodeEstoque.Size = New System.Drawing.Size(204, 22)
         Me.menuProcMovimentodeEstoque.Text = "Movimento de Estoque "
         '
         'menuProcAtualizaçãodeSaldo
         '
         Me.menuProcAtualizaçãodeSaldo.Name = "menuProcAtualizaçãodeSaldo"
-        Me.menuProcAtualizaçãodeSaldo.Size = New System.Drawing.Size(241, 24)
+        Me.menuProcAtualizaçãodeSaldo.Size = New System.Drawing.Size(204, 22)
         Me.menuProcAtualizaçãodeSaldo.Text = "Atualização de Saldo "
         '
         'menuProcFechamentodeEstoque
         '
         Me.menuProcFechamentodeEstoque.Name = "menuProcFechamentodeEstoque"
-        Me.menuProcFechamentodeEstoque.Size = New System.Drawing.Size(241, 24)
+        Me.menuProcFechamentodeEstoque.Size = New System.Drawing.Size(204, 22)
         Me.menuProcFechamentodeEstoque.Text = "Fechamento de Estoque "
         '
         'menuProcIntegraçãoContábil
         '
         Me.menuProcIntegraçãoContábil.Name = "menuProcIntegraçãoContábil"
-        Me.menuProcIntegraçãoContábil.Size = New System.Drawing.Size(241, 24)
+        Me.menuProcIntegraçãoContábil.Size = New System.Drawing.Size(204, 22)
         Me.menuProcIntegraçãoContábil.Text = "Integração Contábil "
         '
         'menuProcDigitaçãodoInventário
         '
         Me.menuProcDigitaçãodoInventário.Name = "menuProcDigitaçãodoInventário"
-        Me.menuProcDigitaçãodoInventário.Size = New System.Drawing.Size(241, 24)
+        Me.menuProcDigitaçãodoInventário.Size = New System.Drawing.Size(204, 22)
         Me.menuProcDigitaçãodoInventário.Text = "Digitação do Inventário "
         '
         'menuProcProcessaroinventário
         '
         Me.menuProcProcessaroinventário.Name = "menuProcProcessaroinventário"
-        Me.menuProcProcessaroinventário.Size = New System.Drawing.Size(241, 24)
+        Me.menuProcProcessaroinventário.Size = New System.Drawing.Size(204, 22)
         Me.menuProcProcessaroinventário.Text = "Processar o Inventário "
         '
         'menuConsultas
         '
         Me.menuConsultas.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menuConsSaldodoProduto})
         Me.menuConsultas.Name = "menuConsultas"
-        Me.menuConsultas.Size = New System.Drawing.Size(84, 24)
+        Me.menuConsultas.Size = New System.Drawing.Size(71, 20)
         Me.menuConsultas.Text = "Consultas"
         '
         'menuConsSaldodoProduto
         '
         Me.menuConsSaldodoProduto.Name = "menuConsSaldodoProduto"
-        Me.menuConsSaldodoProduto.Size = New System.Drawing.Size(200, 24)
+        Me.menuConsSaldodoProduto.Size = New System.Drawing.Size(169, 22)
         Me.menuConsSaldodoProduto.Text = "Saldo do produto "
         '
         'menuRelatorios
         '
         Me.menuRelatorios.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menuRelSaldodoProduto, Me.menuRelContagemdoInventário})
         Me.menuRelatorios.Name = "menuRelatorios"
-        Me.menuRelatorios.Size = New System.Drawing.Size(88, 24)
+        Me.menuRelatorios.Size = New System.Drawing.Size(71, 20)
         Me.menuRelatorios.Text = "&Relatórios"
         '
         'menuRelSaldodoProduto
         '
         Me.menuRelSaldodoProduto.Name = "menuRelSaldodoProduto"
-        Me.menuRelSaldodoProduto.Size = New System.Drawing.Size(239, 24)
+        Me.menuRelSaldodoProduto.Size = New System.Drawing.Size(203, 22)
         Me.menuRelSaldodoProduto.Text = "Saldo do produto "
         '
         'menuRelContagemdoInventário
         '
         Me.menuRelContagemdoInventário.Name = "menuRelContagemdoInventário"
-        Me.menuRelContagemdoInventário.Size = New System.Drawing.Size(239, 24)
+        Me.menuRelContagemdoInventário.Size = New System.Drawing.Size(203, 22)
         Me.menuRelContagemdoInventário.Text = "Contagem do Inventário"
         '
         'menuSistema
         '
         Me.menuSistema.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menuSisConfiguracoes, Me.ToolStripMenuItem1, Me.menuSisUsuarios})
         Me.menuSistema.Name = "menuSistema"
-        Me.menuSistema.Size = New System.Drawing.Size(73, 24)
+        Me.menuSistema.Size = New System.Drawing.Size(60, 20)
         Me.menuSistema.Text = "&Sistema"
         '
         'menuSisConfiguracoes
         '
         Me.menuSisConfiguracoes.Name = "menuSisConfiguracoes"
-        Me.menuSisConfiguracoes.Size = New System.Drawing.Size(173, 24)
+        Me.menuSisConfiguracoes.Size = New System.Drawing.Size(151, 22)
         Me.menuSisConfiguracoes.Text = "Configurações"
         '
         'ToolStripMenuItem1
         '
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(170, 6)
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(148, 6)
         '
         'menuSisUsuarios
         '
         Me.menuSisUsuarios.Name = "menuSisUsuarios"
-        Me.menuSisUsuarios.Size = New System.Drawing.Size(173, 24)
+        Me.menuSisUsuarios.Size = New System.Drawing.Size(151, 22)
         Me.menuSisUsuarios.Text = "Usuários"
         '
         'Ajuda
         '
         Me.Ajuda.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ContentsToolStripMenuItem, Me.ToolStripSeparator8, Me.AboutToolStripMenuItem})
         Me.Ajuda.Name = "Ajuda"
-        Me.Ajuda.Size = New System.Drawing.Size(60, 24)
+        Me.Ajuda.Size = New System.Drawing.Size(50, 20)
         Me.Ajuda.Text = "&Ajuda"
         '
         'ContentsToolStripMenuItem
         '
         Me.ContentsToolStripMenuItem.Name = "ContentsToolStripMenuItem"
         Me.ContentsToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.F1), System.Windows.Forms.Keys)
-        Me.ContentsToolStripMenuItem.Size = New System.Drawing.Size(184, 24)
+        Me.ContentsToolStripMenuItem.Size = New System.Drawing.Size(160, 22)
         Me.ContentsToolStripMenuItem.Text = "Manual"
         '
         'ToolStripSeparator8
         '
         Me.ToolStripSeparator8.Name = "ToolStripSeparator8"
-        Me.ToolStripSeparator8.Size = New System.Drawing.Size(181, 6)
+        Me.ToolStripSeparator8.Size = New System.Drawing.Size(157, 6)
         '
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.Image = CType(resources.GetObject("AboutToolStripMenuItem.Image"), System.Drawing.Image)
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(184, 24)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(160, 22)
         Me.AboutToolStripMenuItem.Text = "Sobre ..."
         '
         'StatusStrip
         '
         Me.StatusStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel})
-        Me.StatusStrip.Location = New System.Drawing.Point(0, 533)
+        Me.StatusStrip.Location = New System.Drawing.Point(0, 431)
         Me.StatusStrip.Name = "StatusStrip"
-        Me.StatusStrip.Padding = New System.Windows.Forms.Padding(1, 0, 19, 0)
-        Me.StatusStrip.Size = New System.Drawing.Size(933, 25)
+        Me.StatusStrip.Size = New System.Drawing.Size(700, 22)
         Me.StatusStrip.TabIndex = 7
         Me.StatusStrip.Text = "StatusStrip"
         '
         'ToolStripStatusLabel
         '
         Me.ToolStripStatusLabel.Name = "ToolStripStatusLabel"
-        Me.ToolStripStatusLabel.Size = New System.Drawing.Size(49, 20)
+        Me.ToolStripStatusLabel.Size = New System.Drawing.Size(39, 17)
         Me.ToolStripStatusLabel.Text = "Status"
         '
         'mdiPrincipal
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(933, 558)
+        Me.ClientSize = New System.Drawing.Size(700, 453)
         Me.Controls.Add(Me.MenuStrip)
         Me.Controls.Add(Me.StatusStrip)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.MenuStrip
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "mdiPrincipal"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "COLABORADORES"

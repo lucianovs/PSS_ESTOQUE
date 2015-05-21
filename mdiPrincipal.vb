@@ -241,7 +241,7 @@ Public Class mdiPrincipal
         frmBrowse_TipodeMovimentos.Show()
     End Sub
     Private Sub menuCadEstruturadeProdutos_Click(sender As Object, e As EventArgs) Handles menuCadEstruturadeProdutos.Click
-        'MsgBox("Cadastro de Estrutura de Produtos em manutenção. Por favor aguarde à liberação!")
+        'MsgBox("Cadastro de Estrutara de Produtos em manutenção. Por favor aguarde à liberação!")
         Dim frmBrowse_EstruturadeProdutos As frmBrowse = New frmBrowse("QES004", "frmEstruturadeProdutos")
 
         frmBrowse_EstruturadeProdutos.MdiParent = Me
@@ -272,18 +272,26 @@ Public Class mdiPrincipal
         MsgBox("Processo de Processar o Inventário em manutenção. Por favor aguarde à liberação!")
     End Sub
     Private Sub menuConsSaldodoProduto_Click(sender As Object, e As EventArgs) Handles menuConsSaldodoProduto.Click
-        MsgBox("Consulta de Saldo de Produto em manutenção. Por favor aguarde à liberação!")
+        Dim ConsulaSaldodoProduto As New frmConsultaSaldodoProduto
+
+        ConsulaSaldodoProduto.MdiParent = Me
+        ConsulaSaldodoProduto.Tag = menuConsSaldodoProduto.Tag 'é gravado no tag do menu o nível de acesso
+        ConsulaSaldodoProduto.Text = menuConsSaldodoProduto.Text
+        ConsulaSaldodoProduto.Show()
     End Sub
 
     Private Sub menuRelSaldodoProduto_Click(sender As Object, e As EventArgs) Handles menuRelSaldodoProduto.Click
-        MsgBox("Relatório de Saldo de Produto em manutenção. Por favor aguarde à liberação!")
+        Dim RelSaldodoProduto As New frmRelSaldodoProduto
+
+        RelSaldodoProduto.MdiParent = Me
+        RelSaldodoProduto.Tag = menuRelSaldodoProduto.Tag 'é gravado no tag do menu o nível de acesso
+        RelSaldodoProduto.Text = menuRelSaldodoProduto.Text
+        RelSaldodoProduto.Show()
     End Sub
 
     Private Sub menuRelContagemdoInventário_Click_1(sender As Object, e As EventArgs) Handles menuRelContagemdoInventário.Click
         MsgBox("Relatório de Contagem de Inventário em manutenção. Por favor aguarde à liberação!")
     End Sub
 
-    Private Sub menuCadastro_Click(sender As Object, e As EventArgs) Handles menuCadastro.Click
 
-    End Sub
 End Class

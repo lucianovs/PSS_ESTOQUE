@@ -11,7 +11,6 @@ Module ModPrincipal
     Public g_Login As String
     Public g_Nivel As Integer
 
-
     'Guarda os parâmetros para passar do Browse para aos cadastros
     Public g_Param(6) As String
     'Definição do Projeto (Deve ser incializado no Load do Form Principal e ter o mesmo nome do projeto (Sensitivo)
@@ -20,6 +19,10 @@ Module ModPrincipal
     Public g_Comando As String
     'Definição do comando que o browse envio para em seguida poder retornar
     Public g_Comando_auxiliar As String
+
+    ' variaves de controle de pesquisa tabela ES0000 e ES0004
+    Public g_PequisaGenerica As String
+    Public pesq_coddif As String
 
     'Variável para Identificar a Estrutura para Inserir Unidades
     Public g_Unidade As String
@@ -972,6 +975,30 @@ Module ModPrincipal
         dtLerCol.Clear()
 
     End Function
+
+    'Ler Descrição do Produto
+    Public Function LerDescricao_Produto(fCodigo_Col As String) As String
+        Dim cQuery As String
+        Dim dtLerCol As DataTable = New DataTable("EES000")
+
+        cQuery = "SELECT ES000_DESPRO FROM EES000 where ES000_CODPRO = '" & fCodigo_Col & "'"
+
+        Using daTabela As New OleDbDataAdapter()
+            daTabela.SelectCommand = New OleDbCommand(cQuery, g_ConnectBanco)
+
+            ' Preencher o DataTable 
+            daTabela.Fill(dtLerCol)
+            If dtLerCol.Rows.Count > 0 Then
+                Return dtLerCol.Rows(0).Item("ES000_DESPRO")
+            Else
+                Return ""
+            End If
+        End Using
+
+        dtLerCol.Clear()
+
+    End Function
+
 
     Public Function LerCargo_Colaborador(fCodigo_Col As Double, Optional ByRef sCodUnidade As Double = 0) As String
         Dim cQuery As String

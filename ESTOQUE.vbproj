@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -63,10 +78,15 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\Program Files (x86)\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win32_x86\dotnet\CrystalDecisions.Windows.Forms.dll</HintPath>
     </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win32_x86\dotnet\FlashControlV71.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
@@ -91,12 +111,43 @@
     <Compile Include="Classes\ClassConsultas.vb" />
     <Compile Include="Classes\ClassCrypt.vb" />
     <Compile Include="Classes\classLoadListView.vb" />
+    <Compile Include="Classes\classValidarCPF_CNPJ.vb" />
     <Compile Include="Classes\ClassProcessos.vb" />
     <Compile Include="Classes\ClassRelatorios.vb" />
+    <Compile Include="Relatorio\FormReportViewSaldoProduto.Designer.vb">
+      <DependentUpon>FormReportViewSaldoProduto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorio\FormReportViewSaldoProduto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatorio\RelacaoUnidades.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RelacaoUnidades.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorio\RelSaldodoProduto.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RelSaldodoProduto.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Visao\frmRelSaldodoProduto.Designer.vb">
+      <DependentUpon>frmRelSaldodoProduto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Visao\frmRelSaldodoProduto.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Visao\dlgColaborador.Designer.vb">
       <DependentUpon>dlgColaborador.vb</DependentUpon>
     </Compile>
     <Compile Include="Visao\dlgColaborador.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\dlgPesquisa.designer.vb">
+      <DependentUpon>dlgPesquisa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Visao\dlgPesquisa.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Visao\frmArmazens.designer.vb">
@@ -111,6 +162,18 @@
     <Compile Include="Visao\frmBrowse.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Relatorio\frmReportViewer.designer.vb">
+      <DependentUpon>frmReportViewer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorio\frmReportViewer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\frmConsulaSaldodoProduto.designer.vb">
+      <DependentUpon>frmConsulaSaldodoProduto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\frmConsulaSaldodoProduto.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Visao\frmEstruturadeProdutos.designer.vb">
       <DependentUpon>frmEstruturadeProdutos.vb</DependentUpon>
     </Compile>
@@ -123,13 +186,7 @@
     <Compile Include="Visao\frmProdutos.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visao\frmConsultaSaldProd.Designer.vb">
-      <DependentUpon>frmConsultaSaldProd.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Visao\frmConsultaSaldProd.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Visao\frmTipoDeMovimentos.Designer.vb">
+    <Compile Include="Visao\frmTipoDeMovimentos.designer.vb">
       <DependentUpon>frmTipoDeMovimentos.vb</DependentUpon>
     </Compile>
     <Compile Include="Visao\frmTipoDeMovimentos.vb">
@@ -177,8 +234,25 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Relatorio\FormReportViewSaldoProduto.resx">
+      <DependentUpon>FormReportViewSaldoProduto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorio\RelacaoUnidades.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RelacaoUnidades.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorio\RelSaldodoProduto.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RelSaldodoProduto.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visao\frmRelSaldodoProduto.resx">
+      <DependentUpon>frmRelSaldodoProduto.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Visao\dlgColaborador.resx">
       <DependentUpon>dlgColaborador.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visao\dlgPesquisa.resx">
+      <DependentUpon>dlgPesquisa.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Visao\frmArmazens.resx">
       <DependentUpon>frmArmazens.vb</DependentUpon>
@@ -186,14 +260,17 @@
     <EmbeddedResource Include="Visao\frmBrowse.resx">
       <DependentUpon>frmBrowse.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Relatorio\frmReportViewer.resx">
+      <DependentUpon>frmReportViewer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\frmConsulaSaldodoProduto.resx">
+      <DependentUpon>frmConsulaSaldodoProduto.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Visao\frmEstruturadeProdutos.resx">
       <DependentUpon>frmEstruturadeProdutos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Visao\frmProdutos.resx">
       <DependentUpon>frmProdutos.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Visao\frmConsultaSaldProd.resx">
-      <DependentUpon>frmConsultaSaldProd.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Visao\frmTipoDeMovimentos.resx">
       <DependentUpon>frmTipoDeMovimentos.vb</DependentUpon>
@@ -230,7 +307,30 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Relatorio\" />
+    <None Include="Resources\sair.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sair1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -38,17 +38,28 @@ Partial Class frmEstruturadeProdutos
         Me.btnImprimir = New System.Windows.Forms.ToolStripButton()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.tssContReg = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.TabControle = New System.Windows.Forms.TabControl()
+        Me.TabPrimeiraPagina = New System.Windows.Forms.TabPage()
+        Me.txtquantidade = New System.Windows.Forms.TextBox()
+        Me.dgvProdutos = New System.Windows.Forms.DataGridView()
+        Me.btncancelarsubprodutos = New System.Windows.Forms.Button()
+        Me.btnIncluirsubproduto = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.comandoPesquisarsubpruduto = New System.Windows.Forms.Button()
+        Me.txtdescricaosubproduto = New System.Windows.Forms.TextBox()
+        Me.txtCodigosubproduto = New System.Windows.Forms.TextBox()
+        Me.lblCodSubProd = New System.Windows.Forms.Label()
+        Me.PCabecalho = New System.Windows.Forms.Panel()
+        Me.ComandoPesquisar = New System.Windows.Forms.Button()
         Me.txtDescricao = New System.Windows.Forms.TextBox()
         Me.txtCodigo = New System.Windows.Forms.TextBox()
-        Me.lblDescricao = New System.Windows.Forms.Label()
         Me.lblCodigo = New System.Windows.Forms.Label()
-        Me.lblstatus = New System.Windows.Forms.Label()
-        Me.rgAtivo = New System.Windows.Forms.RadioButton()
-        Me.rgInativo = New System.Windows.Forms.RadioButton()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.ToolStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabControle.SuspendLayout()
+        Me.TabPrimeiraPagina.SuspendLayout()
+        CType(Me.dgvProdutos, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PCabecalho.SuspendLayout()
         Me.SuspendLayout()
         '
         'ToolStrip1
@@ -58,7 +69,7 @@ Partial Class frmEstruturadeProdutos
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
-        Me.ToolStrip1.Size = New System.Drawing.Size(424, 39)
+        Me.ToolStrip1.Size = New System.Drawing.Size(730, 39)
         Me.ToolStrip1.Stretch = True
         Me.ToolStrip1.TabIndex = 3
         Me.ToolStrip1.Text = "ToolStrip1"
@@ -162,9 +173,9 @@ Partial Class frmEstruturadeProdutos
         'StatusStrip1
         '
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tssContReg})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 281)
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 438)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(424, 22)
+        Me.StatusStrip1.Size = New System.Drawing.Size(730, 22)
         Me.StatusStrip1.TabIndex = 11
         Me.StatusStrip1.Text = "StatusStrip1"
         '
@@ -174,103 +185,198 @@ Partial Class frmEstruturadeProdutos
         Me.tssContReg.Size = New System.Drawing.Size(78, 17)
         Me.tssContReg.Text = "Registro n / n"
         '
+        'TabControle
+        '
+        Me.TabControle.Controls.Add(Me.TabPrimeiraPagina)
+        Me.TabControle.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.TabControle.Location = New System.Drawing.Point(0, 107)
+        Me.TabControle.Name = "TabControle"
+        Me.TabControle.SelectedIndex = 0
+        Me.TabControle.Size = New System.Drawing.Size(730, 331)
+        Me.TabControle.TabIndex = 35
+        '
+        'TabPrimeiraPagina
+        '
+        Me.TabPrimeiraPagina.Controls.Add(Me.txtquantidade)
+        Me.TabPrimeiraPagina.Controls.Add(Me.dgvProdutos)
+        Me.TabPrimeiraPagina.Controls.Add(Me.btncancelarsubprodutos)
+        Me.TabPrimeiraPagina.Controls.Add(Me.btnIncluirsubproduto)
+        Me.TabPrimeiraPagina.Controls.Add(Me.Label1)
+        Me.TabPrimeiraPagina.Controls.Add(Me.comandoPesquisarsubpruduto)
+        Me.TabPrimeiraPagina.Controls.Add(Me.txtdescricaosubproduto)
+        Me.TabPrimeiraPagina.Controls.Add(Me.txtCodigosubproduto)
+        Me.TabPrimeiraPagina.Controls.Add(Me.lblCodSubProd)
+        Me.TabPrimeiraPagina.Location = New System.Drawing.Point(4, 22)
+        Me.TabPrimeiraPagina.Name = "TabPrimeiraPagina"
+        Me.TabPrimeiraPagina.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPrimeiraPagina.Size = New System.Drawing.Size(722, 305)
+        Me.TabPrimeiraPagina.TabIndex = 0
+        Me.TabPrimeiraPagina.Text = "Sub Produtos"
+        Me.TabPrimeiraPagina.UseVisualStyleBackColor = True
+        '
+        'txtquantidade
+        '
+        Me.txtquantidade.Location = New System.Drawing.Point(9, 96)
+        Me.txtquantidade.MaxLength = 6
+        Me.txtquantidade.Name = "txtquantidade"
+        Me.txtquantidade.Size = New System.Drawing.Size(61, 20)
+        Me.txtquantidade.TabIndex = 50
+        '
+        'dgvProdutos
+        '
+        Me.dgvProdutos.AllowUserToAddRows = False
+        Me.dgvProdutos.AllowUserToDeleteRows = False
+        Me.dgvProdutos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.dgvProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvProdutos.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.dgvProdutos.Location = New System.Drawing.Point(3, 122)
+        Me.dgvProdutos.Name = "dgvProdutos"
+        Me.dgvProdutos.ReadOnly = True
+        Me.dgvProdutos.Size = New System.Drawing.Size(716, 180)
+        Me.dgvProdutos.TabIndex = 48
+        '
+        'btncancelarsubprodutos
+        '
+        Me.btncancelarsubprodutos.Location = New System.Drawing.Point(344, 70)
+        Me.btncancelarsubprodutos.Name = "btncancelarsubprodutos"
+        Me.btncancelarsubprodutos.Size = New System.Drawing.Size(75, 23)
+        Me.btncancelarsubprodutos.TabIndex = 44
+        Me.btncancelarsubprodutos.Text = "Cancelar"
+        Me.btncancelarsubprodutos.UseVisualStyleBackColor = True
+        '
+        'btnIncluirsubproduto
+        '
+        Me.btnIncluirsubproduto.Location = New System.Drawing.Point(344, 24)
+        Me.btnIncluirsubproduto.Name = "btnIncluirsubproduto"
+        Me.btnIncluirsubproduto.Size = New System.Drawing.Size(75, 23)
+        Me.btnIncluirsubproduto.TabIndex = 43
+        Me.btnIncluirsubproduto.Text = "Incluir"
+        Me.btnIncluirsubproduto.UseVisualStyleBackColor = True
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(5, 80)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(65, 13)
+        Me.Label1.TabIndex = 42
+        Me.Label1.Text = "Quantidade:"
+        '
+        'comandoPesquisarsubpruduto
+        '
+        Me.comandoPesquisarsubpruduto.BackgroundImage = CType(resources.GetObject("comandoPesquisarsubpruduto.BackgroundImage"), System.Drawing.Image)
+        Me.comandoPesquisarsubpruduto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.comandoPesquisarsubpruduto.Enabled = False
+        Me.comandoPesquisarsubpruduto.Location = New System.Drawing.Point(78, 23)
+        Me.comandoPesquisarsubpruduto.Name = "comandoPesquisarsubpruduto"
+        Me.comandoPesquisarsubpruduto.Size = New System.Drawing.Size(20, 20)
+        Me.comandoPesquisarsubpruduto.TabIndex = 41
+        Me.comandoPesquisarsubpruduto.UseVisualStyleBackColor = True
+        '
+        'txtdescricaosubproduto
+        '
+        Me.txtdescricaosubproduto.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.txtdescricaosubproduto.Location = New System.Drawing.Point(9, 50)
+        Me.txtdescricaosubproduto.MaxLength = 60
+        Me.txtdescricaosubproduto.Name = "txtdescricaosubproduto"
+        Me.txtdescricaosubproduto.ReadOnly = True
+        Me.txtdescricaosubproduto.Size = New System.Drawing.Size(281, 20)
+        Me.txtdescricaosubproduto.TabIndex = 4
+        '
+        'txtCodigosubproduto
+        '
+        Me.txtCodigosubproduto.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.txtCodigosubproduto.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.txtCodigosubproduto.Location = New System.Drawing.Point(9, 24)
+        Me.txtCodigosubproduto.MaxLength = 6
+        Me.txtCodigosubproduto.Name = "txtCodigosubproduto"
+        Me.txtCodigosubproduto.Size = New System.Drawing.Size(63, 20)
+        Me.txtCodigosubproduto.TabIndex = 3
+        '
+        'lblCodSubProd
+        '
+        Me.lblCodSubProd.AutoSize = True
+        Me.lblCodSubProd.Location = New System.Drawing.Point(5, 8)
+        Me.lblCodSubProd.Name = "lblCodSubProd"
+        Me.lblCodSubProd.Size = New System.Drawing.Size(116, 13)
+        Me.lblCodSubProd.TabIndex = 39
+        Me.lblCodSubProd.Text = "Código do Subproduto:"
+        '
+        'PCabecalho
+        '
+        Me.PCabecalho.Controls.Add(Me.ComandoPesquisar)
+        Me.PCabecalho.Controls.Add(Me.txtDescricao)
+        Me.PCabecalho.Controls.Add(Me.txtCodigo)
+        Me.PCabecalho.Controls.Add(Me.lblCodigo)
+        Me.PCabecalho.Dock = System.Windows.Forms.DockStyle.Top
+        Me.PCabecalho.Location = New System.Drawing.Point(0, 39)
+        Me.PCabecalho.Name = "PCabecalho"
+        Me.PCabecalho.Size = New System.Drawing.Size(730, 62)
+        Me.PCabecalho.TabIndex = 36
+        '
+        'ComandoPesquisar
+        '
+        Me.ComandoPesquisar.BackgroundImage = CType(resources.GetObject("ComandoPesquisar.BackgroundImage"), System.Drawing.Image)
+        Me.ComandoPesquisar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ComandoPesquisar.Enabled = False
+        Me.ComandoPesquisar.Location = New System.Drawing.Point(117, 3)
+        Me.ComandoPesquisar.Name = "ComandoPesquisar"
+        Me.ComandoPesquisar.Size = New System.Drawing.Size(20, 20)
+        Me.ComandoPesquisar.TabIndex = 37
+        Me.ComandoPesquisar.UseVisualStyleBackColor = True
+        '
         'txtDescricao
         '
-        Me.txtDescricao.Location = New System.Drawing.Point(77, 84)
-        Me.txtDescricao.MaxLength = 120
+        Me.txtDescricao.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.txtDescricao.Location = New System.Drawing.Point(8, 29)
+        Me.txtDescricao.MaxLength = 60
         Me.txtDescricao.Name = "txtDescricao"
-        Me.txtDescricao.Size = New System.Drawing.Size(335, 20)
-        Me.txtDescricao.TabIndex = 14
+        Me.txtDescricao.ReadOnly = True
+        Me.txtDescricao.Size = New System.Drawing.Size(306, 20)
+        Me.txtDescricao.TabIndex = 1
         '
         'txtCodigo
         '
         Me.txtCodigo.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txtCodigo.Location = New System.Drawing.Point(62, 46)
-        Me.txtCodigo.MaxLength = 8
+        Me.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.txtCodigo.Location = New System.Drawing.Point(50, 3)
+        Me.txtCodigo.MaxLength = 6
         Me.txtCodigo.Name = "txtCodigo"
         Me.txtCodigo.Size = New System.Drawing.Size(63, 20)
-        Me.txtCodigo.TabIndex = 13
-        '
-        'lblDescricao
-        '
-        Me.lblDescricao.AutoSize = True
-        Me.lblDescricao.Location = New System.Drawing.Point(13, 84)
-        Me.lblDescricao.Name = "lblDescricao"
-        Me.lblDescricao.Size = New System.Drawing.Size(58, 13)
-        Me.lblDescricao.TabIndex = 14
-        Me.lblDescricao.Text = "Descrição:"
+        Me.txtCodigo.TabIndex = 0
         '
         'lblCodigo
         '
         Me.lblCodigo.AutoSize = True
-        Me.lblCodigo.Location = New System.Drawing.Point(13, 47)
+        Me.lblCodigo.Location = New System.Drawing.Point(5, 5)
         Me.lblCodigo.Name = "lblCodigo"
         Me.lblCodigo.Size = New System.Drawing.Size(43, 13)
-        Me.lblCodigo.TabIndex = 13
+        Me.lblCodigo.TabIndex = 35
         Me.lblCodigo.Text = "Código:"
-        '
-        'lblstatus
-        '
-        Me.lblstatus.AutoSize = True
-        Me.lblstatus.Location = New System.Drawing.Point(25, 253)
-        Me.lblstatus.Name = "lblstatus"
-        Me.lblstatus.Size = New System.Drawing.Size(40, 13)
-        Me.lblstatus.TabIndex = 15
-        Me.lblstatus.Text = "Status:"
-        '
-        'rgAtivo
-        '
-        Me.rgAtivo.AutoSize = True
-        Me.rgAtivo.Location = New System.Drawing.Point(71, 249)
-        Me.rgAtivo.Name = "rgAtivo"
-        Me.rgAtivo.Size = New System.Drawing.Size(49, 17)
-        Me.rgAtivo.TabIndex = 17
-        Me.rgAtivo.TabStop = True
-        Me.rgAtivo.Text = "Ativo"
-        Me.rgAtivo.UseVisualStyleBackColor = True
-        '
-        'rgInativo
-        '
-        Me.rgInativo.AutoSize = True
-        Me.rgInativo.Location = New System.Drawing.Point(126, 249)
-        Me.rgInativo.Name = "rgInativo"
-        Me.rgInativo.Size = New System.Drawing.Size(57, 17)
-        Me.rgInativo.TabIndex = 18
-        Me.rgInativo.TabStop = True
-        Me.rgInativo.Text = "Inativo"
-        Me.rgInativo.UseVisualStyleBackColor = True
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(16, 120)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(396, 123)
-        Me.DataGridView1.TabIndex = 19
         '
         'frmEstruturadeProdutos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(424, 303)
-        Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.rgInativo)
-        Me.Controls.Add(Me.rgAtivo)
-        Me.Controls.Add(Me.lblstatus)
-        Me.Controls.Add(Me.txtDescricao)
-        Me.Controls.Add(Me.txtCodigo)
-        Me.Controls.Add(Me.lblDescricao)
-        Me.Controls.Add(Me.lblCodigo)
+        Me.ClientSize = New System.Drawing.Size(730, 460)
+        Me.Controls.Add(Me.PCabecalho)
+        Me.Controls.Add(Me.TabControle)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "frmEstruturadeProdutos"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Estrutura de Produtos"
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabControle.ResumeLayout(False)
+        Me.TabPrimeiraPagina.ResumeLayout(False)
+        Me.TabPrimeiraPagina.PerformLayout()
+        CType(Me.dgvProdutos, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PCabecalho.ResumeLayout(False)
+        Me.PCabecalho.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -290,12 +396,20 @@ Partial Class frmEstruturadeProdutos
     Friend WithEvents btnImprimir As System.Windows.Forms.ToolStripButton
     Friend WithEvents StatusStrip1 As System.Windows.Forms.StatusStrip
     Friend WithEvents tssContReg As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents TabControle As System.Windows.Forms.TabControl
+    Friend WithEvents TabPrimeiraPagina As System.Windows.Forms.TabPage
+    Friend WithEvents PCabecalho As System.Windows.Forms.Panel
+    Friend WithEvents ComandoPesquisar As System.Windows.Forms.Button
     Friend WithEvents txtDescricao As System.Windows.Forms.TextBox
     Friend WithEvents txtCodigo As System.Windows.Forms.TextBox
-    Friend WithEvents lblDescricao As System.Windows.Forms.Label
     Friend WithEvents lblCodigo As System.Windows.Forms.Label
-    Friend WithEvents lblstatus As System.Windows.Forms.Label
-    Friend WithEvents rgAtivo As System.Windows.Forms.RadioButton
-    Friend WithEvents rgInativo As System.Windows.Forms.RadioButton
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents comandoPesquisarsubpruduto As System.Windows.Forms.Button
+    Friend WithEvents txtdescricaosubproduto As System.Windows.Forms.TextBox
+    Friend WithEvents txtCodigosubproduto As System.Windows.Forms.TextBox
+    Friend WithEvents lblCodSubProd As System.Windows.Forms.Label
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents btncancelarsubprodutos As System.Windows.Forms.Button
+    Friend WithEvents btnIncluirsubproduto As System.Windows.Forms.Button
+    Friend WithEvents dgvProdutos As System.Windows.Forms.DataGridView
+    Friend WithEvents txtquantidade As System.Windows.Forms.TextBox
 End Class
