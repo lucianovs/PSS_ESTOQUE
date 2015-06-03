@@ -44,5 +44,4 @@
         End If
         Return False
     End Function
-
 End Class
