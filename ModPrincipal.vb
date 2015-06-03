@@ -999,6 +999,51 @@ Module ModPrincipal
 
     End Function
 
+    'Ler Descrição do Armazém
+    Public Function LerDescricao_Armazem(fCodigo_Col As String) As String
+        Dim cQuery As String
+        Dim dtLerCol As DataTable = New DataTable("EES003")
+
+        cQuery = "SELECT ES003_DESARM FROM EES003 where ES003_CODARM = '" & fCodigo_Col & "'"
+
+        Using daTabela As New OleDbDataAdapter()
+            daTabela.SelectCommand = New OleDbCommand(cQuery, g_ConnectBanco)
+
+            ' Preencher o DataTable 
+            daTabela.Fill(dtLerCol)
+            If dtLerCol.Rows.Count > 0 Then
+                Return dtLerCol.Rows(0).Item("ES003_DESARM")
+            Else
+                Return ""
+            End If
+        End Using
+
+        dtLerCol.Clear()
+
+    End Function
+    'Ler Descrição do Tipo de Movimento
+    Public Function LerDescricao_TipodeMovimento(fCodigo_Col As String) As String
+        Dim cQuery As String
+        Dim dtLerCol As DataTable = New DataTable("EES006")
+
+        cQuery = "SELECT ES006_DESTIP FROM EES006 where ES006_TIPMOV = " & fCodigo_Col & ""
+
+        Using daTabela As New OleDbDataAdapter()
+            daTabela.SelectCommand = New OleDbCommand(cQuery, g_ConnectBanco)
+
+            ' Preencher o DataTable 
+            daTabela.Fill(dtLerCol)
+            If dtLerCol.Rows.Count > 0 Then
+                Return dtLerCol.Rows(0).Item("ES006_DESTIP")
+            Else
+                Return ""
+            End If
+        End Using
+
+        dtLerCol.Clear()
+
+    End Function
+
 
     Public Function LerCargo_Colaborador(fCodigo_Col As Double, Optional ByRef sCodUnidade As Double = 0) As String
         Dim cQuery As String
