@@ -996,7 +996,6 @@ Module ModPrincipal
         End Using
 
         dtLerCol.Clear()
-
     End Function
 
     'Ler Descrição do Armazém
@@ -1019,7 +1018,6 @@ Module ModPrincipal
         End Using
 
         dtLerCol.Clear()
-
     End Function
     'Ler Descrição do Tipo de Movimento
     Public Function LerDescricao_TipodeMovimento(fCodigo_Col As String) As String
